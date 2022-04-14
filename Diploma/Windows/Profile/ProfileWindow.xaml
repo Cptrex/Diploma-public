@@ -1,0 +1,44 @@
+﻿<Window x:Class="Diploma.Windows.Profile.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diploma.Windows.Profile"
+        mc:Ignorable="d"
+        Title="Профиль сотрудника" Height="870" Width="1000" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" Icon="/Media/icon.png" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Image HorizontalAlignment="Center" Height="870" VerticalAlignment="Top" Width="1000" Source="/Media/mainBackgound.jpg" Stretch="Fill"/>
+        <Label Content="Профиль сотрудника" HorizontalAlignment="Left" Margin="447,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="45"/>
+        <Label Content="Имя:" HorizontalAlignment="Left" Margin="420,78,0,0" VerticalAlignment="Top" Width="73" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Фамилия:" HorizontalAlignment="Left" Margin="420,128,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" RenderTransformOrigin="0.206,0.59"/>
+        <Label Content="Отчество:" HorizontalAlignment="Left" Margin="420,178,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="176" Margin="741,82,0,0" VerticalAlignment="Top" Width="171"/>
+        <Button x:Name="ProfileCaseBtn" Content="Досье" HorizontalAlignment="Left" Margin="44,82,0,0" VerticalAlignment="Top" Height="47" Width="259" FontSize="25" FontWeight="Bold" Background="#FF4979F9" Click="ProfileCaseBtn_Click"/>
+        <Button x:Name="ProfileStatisticBtn" Content="Приказы и задачи" HorizontalAlignment="Left" Height="59" Margin="44,153,0,0" VerticalAlignment="Top" Width="259" FontSize="25" FontWeight="Bold" Background="#FF4979F9"/>
+        <Button x:Name="ProfileReportBtn" Content="Отчет" HorizontalAlignment="Left" Height="45" Margin="44,236,0,0" VerticalAlignment="Top" Width="259" FontSize="25" FontWeight="Bold" Background="#FF4979F9"/>
+        <Label Content="Звание:" HorizontalAlignment="Left" Margin="420,228,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Должность:" HorizontalAlignment="Left" Margin="420,273,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Личный номер:" HorizontalAlignment="Left" Margin="420,324,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="ProfileNameTextBox" HorizontalAlignment="Left" Margin="535,84,0,0" Text="Иван" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="22" FontSize="16" FontWeight="Bold" IsEnabled="False"/>
+        <TextBox x:Name="ProfileSurnameTextBox" HorizontalAlignment="Left" Margin="535,136,0,0" Text="Иванов" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="22" FontSize="16" FontWeight="Bold" IsEnabled="False"/>
+        <TextBox x:Name="ProfileLastnameTextBox" HorizontalAlignment="Left" Margin="535,190,0,0" Text="Иванович" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Height="22" FontSize="16" FontWeight="Bold" IsEnabled="False"/>
+        <TextBox x:Name="ProfilePrivateNumberTextBox" HorizontalAlignment="Left" Margin="574,332,0,0" Text="Б-23498-19" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22" FontSize="16" FontWeight="Bold" IsEnabled="False"/>
+        <Button x:Name="ProfileEditBtn" Content="Редактировать профиль" HorizontalAlignment="Left" Margin="722,290,0,0" VerticalAlignment="Top" Width="233" Height="40" FontWeight="Bold" FontSize="16" Background="#FF4979F9" Click="ProfileEditBtn_Click"/>
+        <ListView Margin="25,523,45,41" Name="AddedProfileCasesList" FontSize="22">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ФИО" Width="200" DisplayMemberBinding="{Binding Fullname}" />
+                    <GridViewColumn Header="Пол" Width="70" DisplayMemberBinding="{Binding Gender}" />
+                    <GridViewColumn Header="Возраст" Width="100" DisplayMemberBinding="{Binding Age}" />
+                    <GridViewColumn Header="Организация" Width="210" DisplayMemberBinding="{Binding ExtremistOrg}" />
+                    <GridViewColumn Header="Добавлено" Width="150" DisplayMemberBinding="{Binding Pubdate}" />
+                    <GridViewColumn Header="Отредактировано" Width="190" DisplayMemberBinding="{Binding Mail}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Добавленные записи сотрудника" HorizontalAlignment="Left" Margin="67,475,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="25"/>
+        <Label Content="*Название изменено*" HorizontalAlignment="Left" Margin="397,816,0,0" VerticalAlignment="Top" FontSize="21" Height="38"/>
+        <ComboBox x:Name="PositionComboBox" Margin="540,280,306,549" RenderTransformOrigin="0.5,0.5"/>
+        <ComboBox x:Name="RankComboBox" Margin="540,237,306,592" RenderTransformOrigin="0.5,0.5"/>
+    </Grid>
+</Window>

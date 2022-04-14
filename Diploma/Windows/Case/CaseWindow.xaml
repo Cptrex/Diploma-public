@@ -1,0 +1,102 @@
+﻿<Window x:Class="Diploma.Windows.Case.CaseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diploma.Windows.Case"
+        mc:Ignorable="d"
+        Title="Досье" Height="1034" Width="769" ResizeMode="NoResize" Icon="/Media/icon.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="202*"/>
+            <RowDefinition Height="265*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.RowSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="337*"/>
+                    <RowDefinition Height="130*"/>
+                </Grid.RowDefinitions>
+                <Image Source="/Media/mainBackgound.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" >
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="179.591"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Label Content="Досье №" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" Width="236" FontSize="48" Height="74" FontWeight="Bold" Foreground="#FF005FE8"/>
+                <Label x:Name="NumberLabel" Content="2345123" HorizontalAlignment="Left" Margin="333,10,0,0" VerticalAlignment="Top" Width="306" FontSize="48" Height="74" FontWeight="Bold" Foreground="#FF005FE8"/>
+                <Label Content="Имя:" HorizontalAlignment="Left" Margin="250,106,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Фамилия:" HorizontalAlignment="Left" Margin="250,134,0,0" VerticalAlignment="Top" Height="24" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Отчество:" HorizontalAlignment="Left" Margin="250,164,0,0" VerticalAlignment="Top" Height="26" Width="72" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Псевдоним:" HorizontalAlignment="Left" Margin="250,193,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Дата рождения:" HorizontalAlignment="Left" Margin="250,225,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13" Width="122"/>
+                <Label Content="Место рождения:" HorizontalAlignment="Left" Margin="250,256,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Гражданство:" HorizontalAlignment="Left" Margin="250,285,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Национальность:" HorizontalAlignment="Left" Margin="250,314,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Пол:" HorizontalAlignment="Left" Margin="250,338,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Рост:" HorizontalAlignment="Left" Margin="250,362,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Принадлежность к&#xA;запрещенной организации:" HorizontalAlignment="Left" Margin="250,410,0,0" VerticalAlignment="Top" Width="190" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Член ОПГ:" HorizontalAlignment="Left" Margin="250,453,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="31" FontSize="13"/>
+                <Label Content="Место проживания:" HorizontalAlignment="Left" Margin="250,475,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Состав семьи:" HorizontalAlignment="Left" Margin="250,501,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Телосложение:" HorizontalAlignment="Left" Margin="243,646,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="Особые приметы:" HorizontalAlignment="Left" Margin="237,695,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <Label Content="" HorizontalAlignment="Left" Margin="30,75,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
+                <Label x:Name="WantedLabel" Content="Розыск:" HorizontalAlignment="Left" Margin="585,72,0,0" VerticalAlignment="Top" Width="90" FontWeight="Bold" FontSize="20" Foreground="#FFFF0404"/>
+                <Label x:Name="IsWantedLabel" Content="ДА" HorizontalAlignment="Left" Margin="668,72,0,0" VerticalAlignment="Top" Width="55" FontWeight="Bold" FontSize="20" Foreground="#FFFF0404" Background="{x:Null}"/>
+                <Label Content="Добавил:" HorizontalAlignment="Left" Margin="30,289,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label x:Name="PubDateLabel" Content="21.09.2020" HorizontalAlignment="Left" Margin="73,315,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label x:Name="PublisherLabel" Content="ИвановТ. &#xD;&#xA;" HorizontalAlignment="Left" Margin="95,289,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.369,0.002"/>
+                <Label Content="КОНТАКТЫ" HorizontalAlignment="Left" Margin="20,23,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="25" Width="180" Grid.Row="1"/>
+                <TextBlock x:Name="DescriptionTextBlock" HorizontalAlignment="Left" Margin="376,695,0,0" Text="Хромает на правую ногу, сломано левое ухо. Заикается. Владеет русским, кыргызским, турецким языками" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Height="75" FontWeight="Bold" IsEnabled="False" Grid.RowSpan="2"/>
+                <TextBlock x:Name="ContactsTextBlock" HorizontalAlignment="Left" Margin="20,72,0,0" Text="+996 778 45 74 12 +996 775 47 14 78" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Height="82" FontWeight="Bold" IsEnabled="False" Grid.Row="1"/>
+                <Label Content="СОЦИАЛЬНЫЕ СЕТИ" HorizontalAlignment="Left" Margin="371,40,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="25" Width="304" Grid.Row="1"/>
+                <TextBlock x:Name="SocialNetworkTextBlock" HorizontalAlignment="Left" Margin="380,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="251" Height="87" IsEnabled="False" Grid.Row="1"><Run Text="Boy  - facebook.com/profile/boy"/><LineBreak/><Run Text="lov - ok.ru/profiel/20"/></TextBlock>
+                <Label Content="Доп. информация" HorizontalAlignment="Left" Margin="20,148,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="25" Width="266" RenderTransformOrigin="0.434,0.44" Grid.Row="1"/>
+                <TextBlock x:Name="NoteTextBlock" HorizontalAlignment="Left" Margin="20,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="674" Height="76" IsEnabled="False" FontWeight="Bold" Grid.Row="1"/>
+                <Label Content="Судимость:" HorizontalAlignment="Left" Margin="250,387,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+                <TextBlock x:Name="ConvictionTextBlock" HorizontalAlignment="Left" Margin="334,393,0,0" Text="Ст. 234 УК, Ст. 128 УК. Ст.123 УК" TextWrapping="Wrap" VerticalAlignment="Top" Width="283" Height="39"/>
+                <Button Content="|&lt;" HorizontalAlignment="Left" Margin="20,348,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" Background="#FF4979F9" Foreground="Black"/>
+                <Button Content="&gt;&gt;" HorizontalAlignment="Left" Margin="117,348,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="45" Background="#FF4979F9" Foreground="Black"/>
+                <Button Content="Распечатать досье" HorizontalAlignment="Left" Margin="27,400,0,0" VerticalAlignment="Top" Width="180" Height="34" FontWeight="Bold" Background="#FF4979F9" Foreground="Black" FontSize="14" RenderTransformOrigin="0.5,1.223"/>
+                <Button x:Name="CaseEditMode" Content="Редактировать досье" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" Width="213" Height="34" Background="#FF4979F9" Foreground="Black" FontWeight="Bold" FontSize="14" Click="CaseEditMode_Click"/>
+                <Button Content="&gt;|" HorizontalAlignment="Left" Margin="168,348,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" Background="#FF4979F9" Foreground="Black"/>
+                <Button Content="&lt;&lt;" HorizontalAlignment="Left" Margin="70,348,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="45" Background="#FF4979F9" Foreground="Black"/>
+                <TextBox x:Name="FirstnameTextBox" HorizontalAlignment="Left" Margin="296,111,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" IsEnabled="False" FontWeight="Bold" BorderBrush="Black"/>
+                <TextBox x:Name="SurnameTextBox" HorizontalAlignment="Left" Margin="323,140,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" BorderBrush="Black" FontWeight="Bold" IsEnabled="False"/>
+                <TextBox x:Name="SecondnameTextBox" HorizontalAlignment="Left" Margin="322,168,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" BorderBrush="Black" FontWeight="Bold" IsEnabled="False"/>
+                <TextBox x:Name="NicknameTextBox" HorizontalAlignment="Left" Margin="336,198,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" IsEnabled="False" FontWeight="Bold" BorderBrush="Black"/>
+                <TextBox x:Name="DateBirthTextBox" HorizontalAlignment="Left" Margin="366,230,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="Black" Height="18" IsEnabled="False"/>
+                <TextBox x:Name="PlaceBirthTextBox" HorizontalAlignment="Left" Margin="371,261,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" BorderBrush="Black" FontWeight="Bold" IsEnabled="False"/>
+                <TextBox x:Name="CitizenshipTextBox" HorizontalAlignment="Left" Margin="351,288,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" IsEnabled="False" FontWeight="Bold" BorderBrush="Black"/>
+                <TextBox x:Name="HeightTextBox" HorizontalAlignment="Left" Margin="291,366,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.5,1.728" BorderBrush="Black" IsEnabled="False"/>
+                <TextBox x:Name="OCGMemberTextBox" HorizontalAlignment="Left" Margin="330,457,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" BorderBrush="Black" FontWeight="Bold" IsEnabled="False"/>
+                <TextBox x:Name="LivingPlaceTextBox" HorizontalAlignment="Left" Margin="390,480,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" IsEnabled="False" FontWeight="Bold" BorderBrush="Black">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.659"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <TextBox x:Name="HumanFormTextBox" HorizontalAlignment="Left" Margin="371,655,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontWeight="Bold" IsEnabled="False" BorderBrush="Black"/>
+                <ComboBox HorizontalAlignment="Left" Margin="440,424,0,0" VerticalAlignment="Top" Width="140"/>
+                <ComboBox HorizontalAlignment="Left" Margin="291,341,0,0" VerticalAlignment="Top" Width="58"/>
+                <ComboBox HorizontalAlignment="Left" Margin="375,316,0,0" VerticalAlignment="Top" Width="140"/>
+                <ListView Margin="354,503,103,85">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>
