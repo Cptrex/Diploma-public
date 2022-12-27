@@ -25,7 +25,7 @@ namespace Diploma.Windows.Profile
         {
             InitializeComponent();
             ProfileRepository.FillProfileWindowLables(this);
-            Core.LoadExtremistOrgs();
+            Core.LoadOrgs();
         }
         private void ProfileCaseBtn_Click(object sender, RoutedEventArgs e)
         {

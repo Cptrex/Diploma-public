@@ -30,7 +30,7 @@
                     <GridViewColumn Header="ФИО" Width="200" DisplayMemberBinding="{Binding Fullname}" />
                     <GridViewColumn Header="Пол" Width="70" DisplayMemberBinding="{Binding Gender}" />
                     <GridViewColumn Header="Возраст" Width="100" DisplayMemberBinding="{Binding Age}" />
-                    <GridViewColumn Header="Организация" Width="210" DisplayMemberBinding="{Binding ExtremistOrg}" />
+                    <GridViewColumn Header="Организация" Width="210" DisplayMemberBinding="{Binding Org}" />
                     <GridViewColumn Header="Добавлено" Width="150" DisplayMemberBinding="{Binding Pubdate}" />
                     <GridViewColumn Header="Отредактировано" Width="190" DisplayMemberBinding="{Binding Mail}" />
                 </GridView>

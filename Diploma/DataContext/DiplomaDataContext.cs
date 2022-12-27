@@ -10,7 +10,7 @@ namespace Diploma.DataContext
     {
         public DbSet<Case> Cases { get; set; }
         public DbSet<Profile> Profiles { get; set; }
-        public DbSet<ExtremistOrg> ExtremistOrgs { get; set; }
+        public DbSet<Org> Orgs { get; set; }
         public DbSet<Nationality> Nationalities { get; set; }
         public DbSet<Gender> Genders { get; set; }
         public DbSet<AccessModel>AccessModels { get; set; }
@@ -35,9 +35,9 @@ namespace Diploma.DataContext
             modelBuilder.Entity<Case>().HasAlternateKey(u => new { u.CaseNumber });
 
             modelBuilder.Entity<Case>()
-                .HasOne(c => c.ExtremistOrg)
+                .HasOne(c => c.Org)
                 .WithMany(e => e.Cases)
-                .HasForeignKey(c => c.ExtremistOrgID);
+                .HasForeignKey(c => c.OrgID);
 
             modelBuilder.Entity<Case>()
                 .HasOne(c => c.Profile)

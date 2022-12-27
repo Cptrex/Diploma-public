@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Diploma.DataContext
 {
-    public class ExtremistOrg
+    public class Org
     {
         public int ID { get; set; }
         public string Name { get; set; } 

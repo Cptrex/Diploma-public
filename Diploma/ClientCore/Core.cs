@@ -19,7 +19,7 @@ namespace Diploma.ClientCore
         public static Core Main = new Core();
 
         public static List<DataContext.Case> CaseList = new List<DataContext.Case>();
-        public static List<DataContext.ExtremistOrg> ExtremistOrgs = new List<DataContext.ExtremistOrg>();
+        public static List<DataContext.Org> Orgs = new List<DataContext.Org>();
         public static List<DataContext.Profile> ProfileList = new List<DataContext.Profile>();
         public static List<DataContext.Nationality> NationalityList = new List<DataContext.Nationality>();
         public static List<DataContext.Gender> GenderList = new List<DataContext.Gender>();
@@ -27,14 +27,14 @@ namespace Diploma.ClientCore
         public static List<DataContext.Position> PositionList = new List<DataContext.Position>();
 
 
-        public static async Task <List<DataContext.ExtremistOrg>> LoadExtremistOrgs()
+        public static async Task <List<DataContext.Org>> LoadOrgs()
         {
-            if (ExtremistOrgs.Count > 0) return ExtremistOrgs;
+            if (Orgs.Count > 0) return Orgs;
 
             using DiplomaDataContext db = new DiplomaDataContext();
-            await foreach (var org in db.ExtremistOrgs) ExtremistOrgs.Add(org);
+            await foreach (var org in db.Orgs) Orgs.Add(org);
 
-            return ExtremistOrgs;
+            return Orgs;
         }
 
         public static async Task <List<DataContext.Nationality>> LoadNationalityList()

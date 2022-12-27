@@ -32,8 +32,8 @@ namespace Diploma.DataContext
 
         public int ProfileID { get; set; }
         public Profile Profile { get; set; }
-        public int ExtremistOrgID { get; set; }
-        public ExtremistOrg ExtremistOrg { get; set; }
+        public int OrgID { get; set; }
+        public Org Org { get; set; }
         public int GenderID { get; set; }
         public Gender Gender { get; set; }
         public int NationalityID { get; set; }

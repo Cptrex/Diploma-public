@@ -51,7 +51,7 @@ namespace Diploma.Windows.Case
           //  caseWindow.GenderTextBox.Text = SelectedCase.Gender;
             caseWindow.HeightTextBox.Text = SelectedCase.Height;
             caseWindow.ConvictionTextBlock.Text = SelectedCase.Conviction;
-            //caseWindow.ExtremistOrgTextBox.Text = SelectExtremistOrg(SelectedCase);
+            //caseWindow.OrgTextBox.Text = SelectOrg(SelectedCase);
             caseWindow.OCGMemberTextBox.Text = SelectedCase.OCGMember;
             caseWindow.LivingPlaceTextBox.Text = SelectedCase.LivingPlace;
             //caseWindow.FamilyCompositionTextBox.Text = SelectedCase.FamilyComposition;
@@ -77,7 +77,7 @@ namespace Diploma.Windows.Case
         //    caseWindow.GenderTextBox.IsEnabled = isCaseEditModeEnabled;
             caseWindow.HeightTextBox.IsEnabled = isCaseEditModeEnabled;
             caseWindow.ConvictionTextBlock.IsEnabled = isCaseEditModeEnabled;
-        //    caseWindow.ExtremistOrgTextBox.IsEnabled = isCaseEditModeEnabled;
+        //    caseWindow.OrgTextBox.IsEnabled = isCaseEditModeEnabled;
             caseWindow.OCGMemberTextBox.IsEnabled = isCaseEditModeEnabled;
             caseWindow.LivingPlaceTextBox.IsEnabled = isCaseEditModeEnabled;
        //     caseWindow.FamilyCompositionTextBox.IsEnabled = isCaseEditModeEnabled;
@@ -113,7 +113,7 @@ namespace Diploma.Windows.Case
           //  SelectedCase.Gender = caseWindow.GenderTextBox.Text;
             SelectedCase.Height = caseWindow.HeightTextBox.Text;
             SelectedCase.Conviction = caseWindow.ConvictionTextBlock.Text;
-           // SelectedCase.ExtremistOrgID = Convert.ToInt32(caseWindow.ExtremistOrgTextBox.Text);
+           // SelectedCase.OrgID = Convert.ToInt32(caseWindow.OrgTextBox.Text);
             SelectedCase.OCGMember = caseWindow.OCGMemberTextBox.Text;
             SelectedCase.LivingPlace = caseWindow.LivingPlaceTextBox.Text;
           //  SelectedCase.FamilyComposition = caseWindow.FamilyCompositionTextBox.Text;
@@ -133,9 +133,9 @@ namespace Diploma.Windows.Case
             using DiplomaDataContext db = new DiplomaDataContext();
             SelectedCase = db.Cases.Find(Core.Main.CaseID);
         }
-        public string SelectExtremistOrg(DataContext.Case currentCase)
+        public string SelectOrg(DataContext.Case currentCase)
         {
-            return Core.ExtremistOrgs.FirstOrDefault(e => e.ID == currentCase.ExtremistOrgID).Name;
+            return Core.Orgs.FirstOrDefault(e => e.ID == currentCase.OrgID).Name;
         }
         public string SelectNationality(DataContext.Case currentCase)
         {
@@ -149,7 +149,7 @@ namespace Diploma.Windows.Case
             {
                 case Structure.SearchType.Organization:
                     filteredCaseList = (from currentCase in Core.CaseList
-                                            where SelectExtremistOrg(currentCase).ToLower().Contains(searhText.ToLower())
+                                            where SelectOrg(currentCase).ToLower().Contains(searhText.ToLower())
                                             select currentCase).ToList();
                     break;
                 case Structure.SearchType.Nationality:
